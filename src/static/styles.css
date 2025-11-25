@@ -89,23 +89,42 @@ section h3 {
   color: #1a237e;
 }
 
+
 .participants-list {
-  list-style-position: inside;
   margin: 0;
   padding: 0;
 }
 
-.participants-list li {
+.participants-list.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
   padding: 4px 0;
   color: #555;
   font-size: 14px;
 }
 
-.participants-list li:before {
-  content: "\2022 ";
-  color: #0066cc;
-  font-weight: bold;
-  margin-right: 8px;
+.participant-email {
+  flex: 1;
+}
+
+.delete-participant {
+  cursor: pointer;
+  color: #c62828;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: color 0.2s;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.delete-participant:hover {
+  background: #ffebee;
+  color: #a31515;
 }
 
 .form-group {
